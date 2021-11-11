@@ -3,3 +3,203 @@
 @import "./colors.scss";
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+body {
+    margin: 0;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.header {
+    padding: 30px 0 30px 0;
+    border-bottom: 1px solid $grayish-blue;
+    margin: 0 8% 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+        border-bottom: none;
+        margin: 0 7% 0 7%;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            .name {
+                font-size: 25px;
+                font-weight: bold;
+                margin-right: 56px;
+
+                a {
+                    color: $black;
+                }
+            }
+
+            li {
+                position: relative;
+
+                a {
+                    color: $dark-grayish-blue;
+                    text-decoration: none;
+                }
+            }
+
+            .menu-icon {
+                margin-right: 16px;
+                cursor: pointer;
+                display: none;
+                @include mobile {
+                    display: block;
+                }
+            }
+
+            .item {
+                margin: 0 32px 0 0;
+
+                @include mobile {
+                    display: none;
+                }
+
+                &:hover::after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: -47px;
+                    border-bottom: 4px solid $primary-orange;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+
+        .basket {
+            .basket-img {
+                width: 21px;
+                cursor: pointer;
+            }
+
+            .basket-tab {
+                display: none;
+                position: absolute;
+                right: 85px;
+                top: 90px;
+                width: 360px;
+                background: $white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+
+                @include mobile {
+                    width: 95%;
+                    right: 0;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+
+                .title {
+                    padding: 24px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-bottom: 1px solid #e4e9f2;
+                }
+
+                .empty-cart {
+                    text-align: center;
+                    color: $dark-grayish-blue;
+                    font-weight: bold;
+                    display: flex;
+                    height: 170px;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .body-cart {
+                    display: flex;
+                    flex-direction: column;
+
+                    .card {
+                        display: flex;
+                        align-items: center;
+                        margin: 24px;
+
+                        .image {
+                            img {
+                                border-radius: 4px;
+                                width: 50px;
+                            }
+                        }
+
+                        .details {
+                            margin-left: 16px;
+                            color: $dark-grayish-blue;
+                            p {
+                                margin: 0;
+                            }
+
+                            .price {
+                                color: $black;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .trash {
+                            cursor: pointer;
+                            margin-left: 19px;
+                            @include mobile {
+                                margin-left: 14px;
+                            }
+                        }
+                    }
+
+                    .btn {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 32px;
+                        .btn-style {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 312px;
+                            height: 56px;
+                            font-weight: bold;
+                            border-radius: 10px;
+                            background: $primary-orange;
+                            color: $white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            &:focus > .basket-tab {
+                display: block;
+            }
+        }
+
+        .profil {
+            margin-left: 40px;
+            cursor: pointer;
+            img {
+                width: 50px;
+                border-radius: 50%;
+
+                &:hover {
+                    box-shadow: 0 0 0 2px $primary-orange;
+                }
+            }
+
+            @include mobile {
+                img {
+                    width: 24px;
+                }
+            }
+        }
+    }
+}
