@@ -22,6 +22,11 @@ export default {
 					quantity: 3,
 				},
 			],
+			assets: {
+				icone_delete: require("@/assets/images/icon-delete.svg"),
+				image_avatar: require("@/assets/images/image-avatar.png"),
+				icon_cart: require("@/assets/images/icon-cart.svg"),
+			},
 		};
 	},
 };
@@ -56,11 +61,7 @@ export default {
 		</nav>
 		<div class="right">
 			<div class="basket" title="Panier d'achat" tabindex="0">
-				<img
-					class="basket-img"
-					:src="require('@/assets/images/icon-cart.svg')"
-					alt="Panier d'achat"
-				/>
+				<img class="basket-img" :src="assets.icon_cart" alt="Panier d'achat" />
 				<div class="basket-tab">
 					<div class="title">Cart</div>
 					<div class="empty-cart" v-if="productsInCart.length === 0">
@@ -88,9 +89,7 @@ export default {
 							</div>
 							<div class="trash">
 								<img
-									:src="
-										require('@/assets/images/icon-delete.svg')
-									"
+									:src="assets.icone_delete"
 									alt="Supprimer ce produit"
 									title="Supprimer ce produit"
 								/>
@@ -105,10 +104,7 @@ export default {
 				</div>
 			</div>
 			<div class="profil" title="Photo de profil" tabindex="0">
-				<img
-					:src="require('@/assets/images/image-avatar.png')"
-					alt="Photo de profil"
-				/>
+				<img :src="assets.image_avatar" alt="Photo de profil" />
 			</div>
 		</div>
 	</header>
