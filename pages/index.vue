@@ -98,13 +98,26 @@ export default {
 							</div>
 						</div>
 						<div class="thumbnail">
-							<img
-								:src="value"
+							<div
+								class="overlay-thumbnail"
 								v-for="(value, index) in assets.thumbnail"
 								:key="index"
 								v-on:click="selectedImage = index"
-								alt="Image du produit"
-							/>
+							>
+								<img
+									:src="value"
+									alt="Image du produit"
+									:class="{
+										'selected-img': selectedImage == index,
+									}"
+								/>
+								<div
+									:class="{
+										'white-overlay': 1,
+										visible: selectedImage == index,
+									}"
+								></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -141,13 +154,26 @@ export default {
 						</div>
 					</div>
 					<div class="thumbnail">
-						<img
-							:src="value"
+						<div
+							class="overlay-thumbnail"
 							v-for="(value, index) in assets.thumbnail"
 							:key="index"
 							v-on:click="selectedImage = index"
-							alt="Image du produit"
-						/>
+						>
+							<img
+								:src="value"
+								alt="Image du produit"
+								:class="{
+									'selected-img': selectedImage == index,
+								}"
+							/>
+							<div
+								:class="{
+									'white-overlay': 1,
+									visible: selectedImage == index,
+								}"
+							></div>
+						</div>
 					</div>
 				</div>
 				<div class="details">
