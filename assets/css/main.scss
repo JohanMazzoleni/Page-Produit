@@ -671,6 +671,7 @@ body {
                 border-radius: 10px;
                 align-items: center;
                 justify-content: center;
+                box-shadow: 0 4px 8px 0 #ff7d1a8c;
 
                 @include mobile {
                     margin-top: 16px;
@@ -678,7 +679,6 @@ body {
                     margin-left: 24px;
                     margin-right: 24px;
                     margin-bottom: 88px;
-                    box-shadow: 0 4px 8px 0 #ff7d1a8c;
                 }
 
                 &:hover {
