@@ -114,6 +114,12 @@ export default {
 							:src="assets.productImage[selectedImage]"
 							alt="Image du produit"
 							v-on:click="openImage = 1"
+							class="desktop-overlay"
+						/>
+						<img
+							:src="assets.productImage[selectedImage]"
+							alt="Image du produit"
+							class="phone-overlay"
 						/>
 						<div
 							class="left-arrow"

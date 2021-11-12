@@ -384,6 +384,22 @@ body {
                 }
             }
 
+            .phone-overlay {
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+            }
+
+            .desktop-overlay {
+                display: block;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+
             .left-arrow {
                 position: absolute;
                 top: 50%;
