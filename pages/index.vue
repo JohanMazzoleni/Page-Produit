@@ -103,6 +103,7 @@ export default {
 								v-for="(value, index) in assets.thumbnail"
 								:key="index"
 								v-on:click="selectedImage = index"
+								alt="Image du produit"
 							/>
 						</div>
 					</div>
@@ -139,6 +140,7 @@ export default {
 							v-for="(value, index) in assets.thumbnail"
 							:key="index"
 							v-on:click="selectedImage = index"
+							alt="Image du produit"
 						/>
 					</div>
 				</div>
