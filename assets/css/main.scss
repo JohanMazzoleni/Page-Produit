@@ -547,7 +547,7 @@ body {
         }
 
         .tag {
-            margin-top: 30px;
+            margin-top: 25px;
             font-weight: bold;
             color: $primary-orange;
         }
@@ -564,6 +564,7 @@ body {
         .description {
             color: $dark-grayish-blue;
             font-size: 16px;
+            line-height: 25px;
         }
 
         .total {
@@ -672,6 +673,7 @@ body {
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 4px 8px 0 #ff7d1a8c;
+                font-weight: bold;
 
                 @include mobile {
                     margin-top: 16px;
