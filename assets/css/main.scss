@@ -18,7 +18,8 @@ body {
 
     @include mobile {
         border-bottom: none;
-        margin: 0 7% 0 7%;
+        margin-left: 24px;
+        margin-right: 24px;
     }
 
     nav {
@@ -73,6 +74,10 @@ body {
                 font-size: 25px;
                 font-weight: bold;
                 margin-right: 56px;
+
+                @include mobile {
+                    margin-right: 20px;
+                }
 
                 a {
                     color: $black;
@@ -129,6 +134,7 @@ body {
             .basket-tab {
                 display: none;
                 position: absolute;
+                z-index: 999;
                 right: 85px;
                 top: 90px;
                 width: 360px;
@@ -389,7 +395,7 @@ body {
             .right-arrow {
                 position: absolute;
                 top: 50%;
-                right: 0;
+                right: 16px;
                 transform: translate(0%, -50%);
                 user-select: none;
                 display: none;
@@ -497,7 +503,7 @@ body {
                 color: #b6bcc8;
                 font-size: 16px;
                 font-weight: bold;
-                text-decoration:line-through;
+                text-decoration: line-through;
             }
         }
 
