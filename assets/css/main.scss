@@ -249,6 +249,11 @@ body {
     justify-content: center;
     display: flex;
 
+    @include mobile {
+        flex-direction: column;
+        margin: 0;
+    }
+
     .overlay {
         z-index: 99;
         position: fixed;
@@ -342,10 +347,70 @@ body {
         display: flex;
         flex-direction: column;
         .image {
+            position: relative;
             img {
                 width: 445px;
                 border-radius: 15px;
                 cursor: pointer;
+
+                @include mobile {
+                    width: 100%;
+                    border-radius: 0;
+                }
+            }
+
+            .left-arrow {
+                position: absolute;
+                top: 50%;
+                left: 16px;
+                transform: translate(0%, -50%);
+                user-select: none;
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+
+                .box {
+                    cursor: pointer;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    background: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 15px;
+                    }
+                }
+            }
+
+            .right-arrow {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0%, -50%);
+                user-select: none;
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+
+                .box {
+                    cursor: pointer;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    background: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 15px;
+                    }
+                }
             }
         }
 
@@ -358,11 +423,24 @@ body {
                 width: 88px;
                 border-radius: 10px;
             }
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 
     .details {
         margin-left: 125px;
+
+        @include mobile {
+            margin-left: 24px;
+
+            br {
+                display: none;
+            }
+        }
+
         .tag {
             margin-top: 50px;
             font-weight: bold;
@@ -379,37 +457,53 @@ body {
             font-size: 16px;
         }
 
-        .price-menu {
+        .total {
             display: flex;
-            margin-top: 22px;
-            align-items: center;
-            .price {
-                color: $black;
-                font-weight: bold;
-                font-size: 28px;
+            flex-direction: column;
+
+            @include mobile {
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
             }
 
-            .percent {
-                padding: 8px 10px 8px 8px;
-                margin-left: 16px;
-                color: #ff7e1b;
-                font-weight: bold;
-                background: #ffeee2;
-                border-radius: 6px;
-            }
-        }
+            .price-menu {
+                display: flex;
+                margin-top: 22px;
+                align-items: center;
+                .price {
+                    color: $black;
+                    font-weight: bold;
+                    font-size: 28px;
+                }
 
-        .reduction {
-            margin-top: 10px;
-            color: #b6bcc8;
-            font-size: 16px;
-            font-weight: bold;
+                .percent {
+                    padding: 8px 10px 8px 8px;
+                    margin-left: 16px;
+                    color: #ff7e1b;
+                    font-weight: bold;
+                    background: #ffeee2;
+                    border-radius: 6px;
+                }
+            }
+
+            .reduction {
+                margin-top: 10px;
+                color: #b6bcc8;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration:line-through;
+            }
         }
 
         .buy-menu {
             margin-top: 32px;
             display: flex;
             align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+            }
 
             .quantity-selector {
                 display: flex;
@@ -421,6 +515,12 @@ body {
                 border-radius: 10px;
                 position: relative;
                 user-select: none;
+
+                @include mobile {
+                    width: 100%;
+                    margin-left: 24px;
+                    margin-right: 24px;
+                }
 
                 .less {
                     position: absolute;
@@ -434,7 +534,6 @@ body {
                 }
 
                 .quantity {
-                    // transform: translate(-50%, -50%);
                     font-weight: bold;
                     font-size: 16px;
                 }
@@ -464,8 +563,17 @@ body {
                 align-items: center;
                 justify-content: center;
 
+                @include mobile {
+                    margin-top: 16px;
+                    width: 100%;
+                    margin-left: 24px;
+                    margin-right: 24px;
+                    margin-bottom: 88px;
+                    box-shadow: 0 4px 8px 0 #ff7d1a8c;
+                }
+
                 &:hover {
-                    background: #FFAB6A;
+                    background: #ffab6a;
                 }
 
                 img {

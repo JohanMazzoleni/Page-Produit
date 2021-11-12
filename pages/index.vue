@@ -114,6 +114,24 @@ export default {
 							alt="Image du produit"
 							v-on:click="openImage = 1"
 						/>
+						<div
+							class="left-arrow"
+							title="Avant"
+							v-on:click="switchImage(0)"
+						>
+							<div class="box">
+								<img :src="assets.icon.previous" alt="Avant" />
+							</div>
+						</div>
+						<div
+							class="right-arrow"
+							title="Après"
+							v-on:click="switchImage(1)"
+						>
+							<div class="box">
+								<img :src="assets.icon.next" alt="Après" />
+							</div>
+						</div>
 					</div>
 					<div class="thumbnail">
 						<img
@@ -134,11 +152,13 @@ export default {
 						they’ll<br />
 						withstand everything the weather can offer.
 					</p>
-					<div class="price-menu">
-						<div class="price">$125.00</div>
-						<div class="percent">50%</div>
+					<div class="total">
+						<div class="price-menu">
+							<div class="price">$125.00</div>
+							<div class="percent">50%</div>
+						</div>
+						<div class="reduction">$250.00</div>
 					</div>
-					<div class="reduction">$250.00</div>
 					<div class="buy-menu">
 						<div class="quantity-selector">
 							<div
