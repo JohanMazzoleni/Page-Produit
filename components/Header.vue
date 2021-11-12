@@ -99,11 +99,19 @@ export default {
 
 		<div class="right">
 			<div class="basket" title="Panier d'achat" tabindex="0">
-				<img
-					class="basket-img"
-					:src="assets.icon_cart"
-					alt="Panier d'achat"
-				/>
+				<div class="basket-icon">
+					<img
+						class="basket-img"
+						:src="assets.icon_cart"
+						alt="Panier d'achat"
+					/>
+					<div
+						class="basket-quantity"
+						v-if="productsInCart.length > 0"
+					>
+						{{ productsInCart.length }}
+					</div>
+				</div>
 				<div class="basket-tab">
 					<div class="title">Cart</div>
 					<div class="empty-cart" v-if="productsInCart.length === 0">

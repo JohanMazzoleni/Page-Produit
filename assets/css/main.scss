@@ -126,9 +126,28 @@ body {
         align-items: center;
 
         .basket {
-            .basket-img {
-                width: 21px;
-                cursor: pointer;
+            .basket-icon {
+                position: relative;
+                .basket-img {
+                    width: 21px;
+                    cursor: pointer;
+                }
+
+                .basket-quantity {
+                    display: flex;
+                    position: absolute;
+                    top: -6px;
+                    right: -9px;
+                    width: 19px;
+                    height: 13px;
+                    background: $primary-orange;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 10px;
+                    border-radius: 6.5px;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
 
             .basket-tab {
