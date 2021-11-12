@@ -246,6 +246,7 @@ body {
 
 .product {
     margin: 90px 212px 0 212px;
+    justify-content: center;
     display: flex;
 
     .overlay {
@@ -356,6 +357,120 @@ body {
                 cursor: pointer;
                 width: 88px;
                 border-radius: 10px;
+            }
+        }
+    }
+
+    .details {
+        margin-left: 125px;
+        .tag {
+            margin-top: 50px;
+            font-weight: bold;
+            color: $primary-orange;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-top: 27px;
+        }
+
+        .description {
+            color: $dark-grayish-blue;
+            font-size: 16px;
+        }
+
+        .price-menu {
+            display: flex;
+            margin-top: 22px;
+            align-items: center;
+            .price {
+                color: $black;
+                font-weight: bold;
+                font-size: 28px;
+            }
+
+            .percent {
+                padding: 8px 10px 8px 8px;
+                margin-left: 16px;
+                color: #ff7e1b;
+                font-weight: bold;
+                background: #ffeee2;
+                border-radius: 6px;
+            }
+        }
+
+        .reduction {
+            margin-top: 10px;
+            color: #b6bcc8;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .buy-menu {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+
+            .quantity-selector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 157px;
+                height: 56px;
+                background: #f6f8fd;
+                border-radius: 10px;
+                position: relative;
+                user-select: none;
+
+                .less {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    cursor: pointer;
+                    left: 10px;
+                    color: $primary-orange;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+
+                .quantity {
+                    // transform: translate(-50%, -50%);
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .more {
+                    font-size: 30px;
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translate(0, -50%);
+                    cursor: pointer;
+                    color: $primary-orange;
+                    font-weight: bold;
+                }
+            }
+
+            .buy-button {
+                display: flex;
+                margin-left: 16px;
+                text-decoration: none;
+                color: $white;
+                background: $primary-orange;
+                width: 272px;
+                height: 56px;
+                text-align: center;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background: #FFAB6A;
+                }
+
+                img {
+                    margin-right: 15px;
+                }
             }
         }
     }
