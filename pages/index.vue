@@ -13,10 +13,10 @@ export default {
 					icon_cart: require("@/assets/images/icon-cart-white.svg"),
 				},
 				productImage: [
-					require("@/assets/images/image-product-1.jpg"),
-					require("@/assets/images/image-product-2.jpg"),
-					require("@/assets/images/image-product-3.jpg"),
-					require("@/assets/images/image-product-4.jpg"),
+					"./assets/images/image-product-1.jpg",
+					"./assets/images/image-product-2.jpg",
+					"./assets/images/image-product-3.jpg",
+					"./assets/images/image-product-4.jpg",
 				],
 				thumbnail: [
 					require("@/assets/images/image-product-1-thumbnail.jpg"),
@@ -58,6 +58,18 @@ export default {
 				}
 			}
 		},
+		preloadImage: function (url) {
+			console.log(url);
+			const img = new Image();
+			img.src = url;
+			return img;
+		},
+	},
+	mounted() {
+		var ctx = this;
+		for (let index = 0; index < ctx.assets.productImage.length; index++) {
+			ctx.preloadImage(ctx.assets.productImage[index]);
+		}
 	},
 };
 </script>
